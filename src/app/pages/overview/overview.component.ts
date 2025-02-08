@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { PricesComponent } from "../../components/prices/prices.component";
 import { FormGroup } from '@angular/forms';
+import { ActionBarComponent } from '../../components/action-bar/action-bar.component';
+import { PricesComponent } from '../../components/prices/prices.component';
 
 @Component({
   selector: 'app-overview',
   standalone: true,
-  imports: [PricesComponent],
+  imports: [PricesComponent, ActionBarComponent],
   templateUrl: './overview.component.html',
-  styleUrl: './overview.component.scss'
+  styleUrl: './overview.component.scss',
 })
 export default class OverviewComponent {
   public form = new FormGroup({});
@@ -16,6 +17,20 @@ export default class OverviewComponent {
       {
         id: 1,
         name: 'Responsabilidad Civil obligatoria',
+        detail: [
+          {
+            id: 11,
+            name: 'Hasta 50.000.000€',
+          },
+          {
+            id: 12,
+            name: 'Hasta 100.000.000€',
+          },
+          {
+            id: 13,
+            name: 'Hasta 200.000.000€',
+          },
+        ],
       },
       {
         id: 2,
@@ -42,28 +57,26 @@ export default class OverviewComponent {
         coverages: {
           1: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           2: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           3: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           4: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           5: {
             type: 'icon',
-            value: 'Si'
-          }
-
+            value: 'Si',
+          },
         },
         recommended: true,
-        selected: true
       },
       {
         id: 2,
@@ -72,17 +85,17 @@ export default class OverviewComponent {
         coverages: {
           1: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           2: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           3: {
             type: 'icon',
-            value: 'Si'
-          }
-        }
+            value: 'Si',
+          },
+        },
       },
       {
         id: 3,
@@ -91,15 +104,14 @@ export default class OverviewComponent {
         coverages: {
           1: {
             type: 'icon',
-            value: 'Si'
+            value: 'Si',
           },
           2: {
             type: 'icon',
-            value: 'Si'
-          }
-        }
+            value: 'Si',
+          },
+        },
       },
-    ]
-  }
-
+    ],
+  };
 }

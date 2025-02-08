@@ -1,19 +1,22 @@
 <form [formGroup]="form()" class="prices">
-    <mat-radio-group aria-label="Select an option" class="prices-grid headers" formControlName="selectedOffer">
-        <div></div>
-        @for (offer of offers(); track offer.id) {
-            <app-offer-header 
-                [form]="form()" 
-                [offer]="offer" />
-        }
-    </mat-radio-group>
-    <div class="prices-grid">
-        <app-coverages [coverages]="coverages()" />
-        @for (offer of offers(); track offer.id) {
-            <app-offer-detail   
-                [form]="form()" 
-                [offer]="offer" 
-                [coverages]="coverages()" />
-        }
-    </div>
+  <mat-radio-group
+    aria-label="Select an option"
+    class="prices-grid headers"
+    formControlName="selectedOffer"
+  >
+    <div></div>
+    @for (offer of offers(); track offer.id) {
+      <app-offer-header [form]="form()" [offer]="offer" />
+    }
+  </mat-radio-group>
+  <div class="prices-grid">
+    <app-coverages [coverages]="coverages()" />
+    @for (offer of offers(); track offer.id) {
+      <app-offer-detail
+        [form]="form()"
+        [offer]="offer"
+        [coverages]="coverages()"
+      />
+    }
+  </div>
 </form>

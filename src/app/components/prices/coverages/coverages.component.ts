@@ -6,10 +6,8 @@ import { Coverage } from '../../../models/prices.interface';
   standalone: true,
   imports: [],
   templateUrl: './coverages.component.html',
-  styleUrl: './coverages.component.scss'
+  styleUrl: './coverages.component.scss',
 })
 export class CoveragesComponent {
-
   public coverages = input.required<Coverage[]>();
-  
 }

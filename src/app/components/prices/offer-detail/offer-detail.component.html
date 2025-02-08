@@ -2,11 +2,16 @@
   @for (coverage of coverages(); track coverage.id) {
     <div>
       @if (offer().coverages[coverage.id]) {
-        @if(offer().coverages[coverage.id].type === 'text') {
+        @if (offer().coverages[coverage.id].type === "text") {
           {{ offer().coverages[coverage.id].value }}
         }
-        @if(offer().coverages[coverage.id].type === 'icon') {
-          <mat-icon aria-hidden="false" aria-label="Incluye la cobertura" fontIcon="check" class="check"></mat-icon>
+        @if (offer().coverages[coverage.id].type === "icon") {
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Incluye la cobertura"
+            fontIcon="check"
+            class="check"
+          />
         }
       }
     </div>
