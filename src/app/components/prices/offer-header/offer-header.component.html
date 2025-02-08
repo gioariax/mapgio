@@ -1,0 +1,16 @@
+<div class="offer-header" [ngClass]="{ selected: isSelected() }">
+  @if (offer().recommended) {
+    <div class="recommended">
+      Recomendado
+    </div>
+  }
+  <div class="offer">
+    <span>
+      {{ offer().name }}
+    </span>
+    <span>
+      {{ offer().price }}
+    </span>
+    <mat-radio-button [value]="offer().id" />
+  </div>
+</div>

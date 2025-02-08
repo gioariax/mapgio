@@ -1,0 +1,35 @@
+.offer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #4333c6;
+  color: white;
+  overflow: hidden;
+
+  &.selected {
+    border-top: 1px solid #4333c6;
+    border-left: 1px solid #4333c6;
+    border-right: 1px solid #4333c6;
+  }
+
+  .recommended {
+    background-color: #27b045;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+  }
+}

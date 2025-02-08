@@ -1,0 +1,25 @@
+.offer-detail {
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background-color: #eae7ff;
+
+  div {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  &.selected {
+    border-bottom: 1px solid #4333c6;
+    border-left: 1px solid #4333c6;
+    border-right: 1px solid #4333c6;
+  }
+
+  .check {
+    color: #4333c6;
+  }
+}
