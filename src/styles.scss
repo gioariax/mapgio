@@ -7,3 +7,42 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 1000px;
   margin: auto;
 }
+
+.coverages {
+  .mat-expansion-panel-spacing {
+    margin: 0;
+  }
+
+  .mat-content.mat-content-hide-toggle{
+    margin: 0;
+  }
+
+  .mat-expansion-panel-header.mat-expanded {
+    height: 48px;
+  }
+
+  mat-expansion-panel-header {
+    padding: 0 16px;
+  }
+
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0 16px;
+  }
+
+  .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+    background-color: #fff;
+    cursor: default;
+  }
+
+  .mat-expansion-panel-header:not([aria-disabled=true]) {
+    cursor: default;
+  }
+
+  .mat-expansion-panel .mat-expansion-panel-header:not([aria-disabled=true]).cdk-keyboard-focused, .mat-expansion-panel .mat-expansion-panel-header:not([aria-disabled=true]).cdk-program-focused {
+    background-color: #fff;
+  }
+}

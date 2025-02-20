@@ -1,7 +1,18 @@
 <div class="coverages">
-  @for (coverage of coverages(); track coverage.id) {
-    <div>
-      {{ coverage.name }}
-    </div>
-  }
+  <mat-accordion [multi]="true">
+    @for (coverage of coverages(); track coverage.id) {
+      <mat-expansion-panel hideToggle (opened)="showCoverageDetail(coverage)" (closed)="showCoverageDetail(coverage)">
+        <mat-expansion-panel-header [ngClass]="{ 'have-detail': coverage.detail }">
+          {{ coverage.name }}
+        </mat-expansion-panel-header>
+        @if (coverage.showDetail) {
+          @for (detailItem of coverage.detail; track detailItem.id) {
+            <div>
+              {{ detailItem.name }}
+            </div>
+          }
+        }
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
 </div>

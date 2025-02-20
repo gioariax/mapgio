@@ -6,6 +6,8 @@ export interface Prices {
 export interface Coverage {
   id: number;
   name: string;
+  showDetail?: boolean;
+  detail?: any[];
 }
 
 export interface Offer {

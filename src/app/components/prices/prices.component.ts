@@ -36,11 +36,17 @@ export class PricesComponent implements OnInit {
     );
   }
 
-  selectOffer(offerSelected: Offer) {
-    const newOffers = this.offers().map((offer) => ({
-      ...offer,
-      selected: offer.id === offerSelected.id,
-    }));
-    this.offers.set(newOffers);
+  showCoverageDetail(coverageSelected: Coverage) {
+    const newCoverages = this.coverages().map((coverage) => {
+      if (coverage.id === coverageSelected.id) {
+        return {
+          ...coverage,
+          showDetail: !coverage.showDetail,
+        };
+      } else {
+        return coverage;
+      }
+    });
+    this.coverages.set(newCoverages);
   }
 }

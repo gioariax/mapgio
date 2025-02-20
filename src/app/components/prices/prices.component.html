@@ -10,7 +10,10 @@
     }
   </mat-radio-group>
   <div class="prices-grid">
-    <app-coverages [coverages]="coverages()" />
+    <app-coverages
+      [coverages]="coverages()"
+      (showDetail)="showCoverageDetail($event)"
+    />
     @for (offer of offers(); track offer.id) {
       <app-offer-detail
         [form]="form()"
